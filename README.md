@@ -1,4 +1,4 @@
-<h2 align= "center"> Pesquisando a Palavra-Chave com Regexs </h2>
+<h2 align= "center"> Pesquisando a Palavra-Chave com RegExr </h2>
 
 <h2 align= "center" >
     <img  src="Imagem.jpg" width="200px">
@@ -8,7 +8,7 @@ Projeto de uma biblioteca, que tem como finalidade de facilitar a buscar por um 
 
 Este projeto é composto por uma função promise, em que representa uma operação assincrona. Uma vantagem, pois há a possibilidade de realizar a operação de varios diretórios ao mesmo tempo.
 
-Utiliza-se o Regex como forma de pesquisa da palavra-chave, analisando os nomes dos arquivos para demonstrar onde está localizado.
+Utiliza-se o RegExr como forma de pesquisa da palavra-chave, analisando os nomes dos arquivos para demonstrar onde está localizado.
 
 ### Pré requisitos
 - Node.js
