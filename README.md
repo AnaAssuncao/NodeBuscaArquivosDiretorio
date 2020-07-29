@@ -1,7 +1,7 @@
 <h2 align= "center"> Pesquisando a Palavra-Chave com Regexs </h2>
 
 <h2 align= "center" >
-    <img  src="imagem.jpg" width="200px">
+    <img  src="Imagem.jpg" width="200px">
 </h2>
 
 Projeto de uma biblioteca, que tem como finalidade de facilitar a buscar por um arquivo no computador pelo Node.js,percorrendo Diretório Inicial e os Diretórios Filhos. 
