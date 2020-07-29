@@ -1,0 +1,22 @@
+{
+  "name": "buscaarquivodiretorio",
+  "version": "0.0.1",
+  "description": "Busca Arquivo",
+  "main": "PesquisaComRegex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnaAssuncao/NodeBuscaArquivosDiretorio.git"
+  },
+  "author": "Ana Paula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnaAssuncao/NodeBuscaArquivosDiretorio/issues"
+  },
+  "homepage": "https://github.com/AnaAssuncao/NodeBuscaArquivosDiretorio#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
