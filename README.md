@@ -3,8 +3,9 @@
 <h2 align= "center" >
     <img  src="Imagem.jpg" width="200px">
 </h2>
-Um pequeno projeto com a finalidade de realizar a buscar por arquivos no computador, percorrendo Diretórios filhos a partir de uma raiz, buscando similaridade de nomes  através de Regex.
-Este projeto é composto por uma função promise e fs.readdir,duas funções assíncronas. e tem como objetivo demonstar o controle do fluxo assíncrono de dados.
+Um pequeno projeto com a finalidade de realizar a buscar por arquivos no computador, percorrendo Diretórios filhos a partir de um Diretório Inicial, buscando similaridade de nomes através de Regex.
+
+Este projeto é composto por uma função promise e fs.readdir,duas funções assíncronas. E tem como objetivo demonstar o controle do fluxo assíncrono de dados.
 
 Para realizar a pesquisa utiliza-se o RegExr, analisando os nomes dos arquivos para demonstrar onde está localizado.
 
