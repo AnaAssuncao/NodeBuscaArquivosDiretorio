@@ -3,12 +3,10 @@
 <h2 align= "center" >
     <img  src="Imagem.jpg" width="200px">
 </h2>
+Um pequeno projeto com a finalidade de realizar a buscar por arquivos no computador, percorrendo Diretórios filhos a partir de uma raiz, buscando similaridade de nomes  através de Regex.
+Este projeto é composto por uma função promise e fs.readdir,duas funções assíncronas. e tem como objetivo demonstar o controle do fluxo assíncrono de dados.
 
-Projeto de uma biblioteca, que tem como finalidade de facilitar a buscar por um arquivo no computador pelo Node.js,percorrendo Diretório Inicial e os Diretórios Filhos. 
-
-Este projeto é composto por uma função promise, em que representa uma operação assincrona. Uma vantagem, pois há a possibilidade de realizar a operação de varios diretórios ao mesmo tempo.
-
-Utiliza-se o RegExr como forma de pesquisa da palavra-chave, analisando os nomes dos arquivos para demonstrar onde está localizado.
+Para realizar a pesquisa utiliza-se o RegExr, analisando os nomes dos arquivos para demonstrar onde está localizado.
 
 ### Pré requisitos
 - Node.js
@@ -22,14 +20,14 @@ Objeto composto das Informações:
 
 #### Saída
 Objeto composto:
-- Array com a lista de diretórios percorridos,
-- Arquivos que possuem a palavra-chave identificada e
-- Funções utilizadas.
+- Número de pastas abertas e
+- Arquivos e pastas que possuem a palavra-chave identificada;
+
 
 #### Demostração
 ``` 
-var InformacaoEntrada = require("./InformacaoProcurarPalavra");
-var Pesquisa = require("./PesquisaComRegex");
+const Informacao = require("./InformacaoProcurarPalavra");
+const Pesquisa = require("./PesquisaComRegex");
   
 const Buscas = new Pesquisa();
 
