@@ -1,7 +1,6 @@
 //Informações de outros arquivos
-const fs = require("fs");
-var Informacao = require("./InformacaoProcurarPalavra");
-var Pesquisa = require("./PesquisaComRegex");
+const Informacao = require("./InformacaoProcurarPalavra");
+const Pesquisa = require("./PesquisaComRegex");
   
 const Buscas = new Pesquisa();
  
@@ -13,5 +12,12 @@ Buscas.LeituraArquivosNoDiretorio(Informacao.DiretorioInicial,Informacao.Palavra
 function ImprimeResultado(ObjetoEncontrado)
 {   
     console.log(`Número de pastas abertas:${ObjetoEncontrado.ListaPastas.length}`);
-    ObjetoEncontrado.ArquivosComPalavra.forEach((Arquivo)=>console.log(Arquivo));
+    if( ObjetoEncontrado.ArquivosComPalavra.length>0){
+        console.log("Os diretórios são:")
+        ObjetoEncontrado.ArquivosComPalavra.forEach((Arquivo)=>console.log(Arquivo));
+    }
+    else{
+        console.log("Nenhum arquivo com a palavra " + Informacao.PalavraBuscada + " no nome")
+    }
+
 }

@@ -1,6 +1,5 @@
-const fs = require('fs');
 module.exports = {
-    diretorioInicial: "C:/Users",
-    palavraBuscada: ".docx "
+    DiretorioInicial: "C:/Users/",
+    PalavraBuscada: "word"
 }
 

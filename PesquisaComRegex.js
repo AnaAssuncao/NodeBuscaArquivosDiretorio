@@ -1,5 +1,5 @@
 const fs = require("fs");
-module.exports = class PesquisaRegex
+module.exports = class pesquisaRegex
 
     {
         constructor () {
@@ -11,7 +11,7 @@ module.exports = class PesquisaRegex
             }
         }
 
-        EstruturacaoDados(Diretorio,Pastas, ArquivoDentroDiretorio)
+        EstruturacaoDados(Diretorio,Pastas)
         {
             return new Promise((resolve, reject) =>{
 
