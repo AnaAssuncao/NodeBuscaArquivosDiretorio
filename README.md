@@ -4,11 +4,15 @@
     <img  src="Imagem.jpg" width="200px">
 </h2>
 
-Projeto de uma biblioteca, que tem como finalidade de facilitar a buscar por um arquivo no computador pelo Node.js,percorrendo Diretório Inicial e os Diretórios Filhos. 
+Um projeto com finalidade de facilitar a buscar por um arquivo no computador pelo Node.js, percorrendo por um Diretório Inicial os seus Diretórios Filhos, usando assincronismo.
 
-Este projeto é composto por uma função promise, em que representa uma operação assincrona. Uma vantagem, pois há a possibilidade de realizar a operação de varios diretórios ao mesmo tempo.
+Este projeto possui como objetivo a compreensão das funções assincronas, por isso ele é composto por Promises e a uma função do sistema - Fs.readdir. Uma vantagem, pois há a possibilidade de realizar a operação da busca em vários diretórios ao mesmo tempo.
 
-Utiliza-se o RegExr como forma de pesquisa da palavra-chave, analisando os nomes dos arquivos para demonstrar onde está localizado.
+Para realizar a pesquisa utiliza-se a expressão regular (RegExr) para associar as sequências de caracteres da palavra buscada no nome dos arquivos.
+
+``` 
+new RegExp(PalavraBuscada,"g")
+``` 
 
 ### Pré requisitos
 - Node.js
@@ -22,17 +26,16 @@ Objeto composto das Informações:
 
 #### Saída
 Objeto composto:
-- Array com a lista de diretórios percorridos,
-- Arquivos que possuem a palavra-chave identificada e
-- Funções utilizadas.
+- Número de pastas abertas; e
+- Arquivos que possuem a palavra-chave identificada.
 
 #### Demostração
 ``` 
-var InformacaoEntrada = require("./InformacaoProcurarPalavra");
-var Pesquisa = require("./PesquisaComRegex");
+const Informacao = require("./InformacaoProcurarPalavra");
+const Pesquisa = require("./PesquisaComRegex");
   
 const Buscas = new Pesquisa();
-
+ 
 Buscas.LeituraArquivosNoDiretorio(Informacao.DiretorioInicial,Informacao.PalavraBuscada)
         .then(ImprimeResultado)
         .catch(console.log);
@@ -41,7 +44,12 @@ Buscas.LeituraArquivosNoDiretorio(Informacao.DiretorioInicial,Informacao.Palavra
 function ImprimeResultado(ObjetoEncontrado)
 {   
     console.log(`Número de pastas abertas:${ObjetoEncontrado.ListaPastas.length}`);
+    if( ObjetoEncontrado.ArquivosComPalavra.length>0){
+        console.log("Os diretórios são:")
+        ObjetoEncontrado.ArquivosComPalavra.forEach((Arquivo)=>console.log(Arquivo));
+    }
+    else{
+        console.log("Nenhum arquivo com a palavra " + Informacao.PalavraBuscada + " no nome")
+    }
 
-    ObjetoEncontrado.ArquivosComPalavra.forEach((Arquivo)=>console.log(Arquivo));
-    //Todos os arquivos que possue a Palavra-Chave
 }
